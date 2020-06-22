@@ -23,10 +23,10 @@ workflows:
   version: 2
   build-deploy:
     jobs:
-      -build
-      -deploy:
+    - build
+    - deploy:
         requires:
-          -build
+        - build
 
 #version: 2.1
 #

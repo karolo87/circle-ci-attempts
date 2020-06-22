@@ -1,0 +1,21 @@
+#version: 1.0
+#jobs:
+#  build:
+#    docker:
+#      - image: circleci/openjdk:8u171-jdk # the primary container, where your job's commands are run
+#
+#    working_directory: ~/circle-ci-attempts
+#    steps:
+#      - checkout # check out the code in the project directory
+#      - run: echo "hello world" # run the `echo` command
+
+
+version: 2.1
+
+orbs:
+  maven: circleci/maven@0.0.12
+
+workflows:
+  maven_test:
+    jobs:
+      - maven/test # checkout, build, test, and upload test results

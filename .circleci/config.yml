@@ -12,7 +12,7 @@ jobs:
   deploy:
    docker:
      - image: circleci/buildpack-deps:trusty
-      steps:
+     steps:
      - checkout
      - run:
          name: Deploy app on heroku
